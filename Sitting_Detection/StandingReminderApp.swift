@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct StandingReminderApp: App {
+struct SittingDetectionApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
@@ -12,20 +12,18 @@ struct StandingReminderApp: App {
 }
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
-        let standingManager = StandingReminderManager()
-        standingManager.checkStandingStatus()
-        completionHandler()
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        requestNotificationPermission()
+        return true
     }
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    func requestNotificationPermission() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             if granted {
                 print("Notification permission granted")
-            } else {
-                print("Notification permission denied")
+            } else if let error = error {
+                print("Error requesting notification permission: \(error.localizedDescription)")
             }
         }
-        return true
     }
 }
