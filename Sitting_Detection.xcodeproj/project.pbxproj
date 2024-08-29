@@ -49,6 +49,7 @@
 		C6C23A322C7FE53A0093D72C /* StandingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingInfoView.swift; sourceTree = "<group>"; };
 		C6C23A342C7FE5A60093D72C /* StandingReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingReminderManager.swift; sourceTree = "<group>"; };
 		C6C23A3A2C7FECFC0093D72C /* Sitting_Detection.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sitting_Detection.entitlements; sourceTree = "<group>"; };
+		C6C23A3B2C7FF2500093D72C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		C6AFE88A2C602DF800543561 = {
 			isa = PBXGroup;
 			children = (
+				C6C23A3B2C7FF2500093D72C /* README.md */,
 				C6AFE8952C602DF800543561 /* Sitting_Detection */,
 				C6AFE8A62C602DFA00543561 /* Sitting_DetectionTests */,
 				C6AFE8B02C602DFA00543561 /* Sitting_DetectionUITests */,
